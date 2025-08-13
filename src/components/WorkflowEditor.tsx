@@ -28,7 +28,6 @@ import {
   ControlStructure,
   ControlStructureType,
   Shape,
-  Connection,
   Variable
 } from '../utils/types';
 import {
