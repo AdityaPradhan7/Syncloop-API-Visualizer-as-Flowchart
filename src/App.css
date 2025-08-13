@@ -1,0 +1,357 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Custom SVG marker for larger arrowheads */
+svg {
+  overflow: visible;
+}
+
+/* Define a custom marker for larger arrowheads */
+svg defs {
+  overflow: visible;
+}
+
+.react-flow__edge-path {
+  marker-end: url(#larger-arrowhead) !important;
+}
+
+/* ReactFlow SVG marker definitions */
+@keyframes mountMarker {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* The animation makes the marker visible after it's injected */
+.react-flow-arrowhead {
+  animation: mountMarker 0.1s ease forwards;
+}
+
+/* Custom arrowhead scaling */
+.react-flow__arrowhead {
+  transform: scale(1.5); /* Increase size by 50% */
+}
+
+html, body, #root, .App {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.App {
+  text-align: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.App-header {
+  background-color: #00000061;
+  color: white;
+  padding: 1px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  height: 50px;
+  line-height: normal;
+  box-sizing: border-box;
+}
+
+.App-header h1 {
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+.App-header h2 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: normal;
+  color: #bbb;
+}
+
+/* ReactFlow Node Styles */
+.react-flow__node {
+  cursor: move;
+}
+
+.react-flow__node-customNode {
+  border: none;
+  background: transparent;
+  width: auto;
+  height: auto;
+}
+
+/* ReactFlow Edge Styles */
+.react-flow__edge {
+  pointer-events: all;
+  z-index: 5;
+}
+
+.react-flow__edge-path,
+.react-flow__connection-path {
+  stroke: #b1b1b7;
+  stroke-width: 2px;
+}
+
+.react-flow__connection {
+  z-index: 5;
+}
+
+/* ReactFlow Handle Styles */
+.react-flow__handle {
+  width: 8px;
+  height: 8px;
+  border: 1px solid #555;
+  z-index: 6;
+}
+
+.react-flow__handle-top {
+  top: -4px;
+}
+
+.react-flow__handle-right {
+  right: -4px;
+}
+
+.react-flow__handle-bottom {
+  bottom: -4px;
+}
+
+.react-flow__handle-left {
+  left: -4px;
+}
+
+/* ReactFlow Controls and UI */
+.react-flow__controls {
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.1);
+  transform: translate(-15px);
+  right: auto;
+}
+
+.react-flow .react-flow__controls-button {
+  background: #fff;
+  margin: 5px;
+  box-shadow: 1 0 2px 1px rgba(0, 0, 0, 0.5);
+  border-radius: 7px;
+  color: #555;
+}
+
+
+.react-flow__pane {
+  transform: none;
+  width: auto;
+}
+
+button {
+  padding: 8px 12px;
+  background-color: #4285f4;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+  background-color: #3367d6;
+}
+
+button:active {
+  background-color: #2a56c6;
+}
+
+.node-handle {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  border: 2px solid #777;
+  border-radius: 50%;
+}
+
+.node-handle-top {
+  top: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.node-handle-right {
+  right: -5px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.node-handle-bottom {
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.node-handle-left {
+  left: -5px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#root {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+}
+
+.logo {
+  height: 1em;
+  padding: 0.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* Input and Output params panels */
+.param-panel {
+  position: fixed;
+  width: 185px;
+  height: 100vh;
+  background: #f5f5f5;
+  overflow-y: auto;
+  padding: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 5;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.input-panel {
+  left: 0;
+  border-right: 0px solid #ddd;
+}
+
+.output-panel {
+  right: 0;
+  border-left: 1px solid #ddd;
+}
+
+.panel-title {
+  font-size: 17px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+  color: #333;
+}
+
+/* Tree View style for parameters */
+.param-item {
+  display: flex;
+  align-items: center;
+  padding: 4px 0;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+  position: relative;
+}
+
+.param-item:hover {
+  background-color: #eaeaea;
+}
+
+.param-document {
+  cursor: pointer;
+}
+
+.param-type {
+  font-size: 0.85em;
+  background-color: #e7f3ff;
+  padding: 2px 6px;
+  border-radius: 3px;
+  margin-right: 8px;
+  color: #0066cc;
+}
+
+.param-type[data-type="document"] {
+  background-color: #fff2e6;
+  color: #cc6600;
+}
+
+.param-name {
+  font-weight: 500;
+  color: #444;
+}
+
+.no-params {
+  font-style: italic;
+  color: #888;
+  margin-top: 20px;
+}
+
+
+.param-item[data-has-children="true"][data-expanded="true"]::before {
+  transform: rotate(90deg);
+}
+
+.param-item[data-has-children="true"][data-expanded="false"]::before {
+  transform: rotate(0deg);
+}
+
+.workflow-container {
+  height: 100vh;
+  margin-left: 0%;
+}
+
+/* Update the attribution text color for better visibility */
+.react-flow__attribution {
+  background-color: black;
+  opacity: 0;
+  color: rgb(255, 0, 0);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  padding: 5px;
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 0px;
+  z-index: 10;
+}
+
+.react-flow__attribution a {
+  color: #61dafb;
+  font-weight: bold;
+}
