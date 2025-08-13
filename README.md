@@ -10,25 +10,27 @@ This project implements a visualization for the APIs of Syncloop, a low-code API
 - Comments for control structures
 - Conditional statements (True/False) display
 
-## Tree View v/s Flowchart View
+## Tree View vs. Flowchart View
 
 ### 1. Switch-Case API
 
-### Tree View
+### Tree View – (By Syncloop)
 
-<img width="1920" height="498" alt="Screenshot (1319)" src="https://github.com/user-attachments/assets/8163e5ea-e2a8-4cfa-a948-3ebdf6fee259" />
+<img width="1920" height="753" alt="Screenshot (1325)" src="https://github.com/user-attachments/assets/8dcdfd92-8d15-4020-bde1-1ebf9404a46e" />
 
-### Flowchart View
+### Flowchart View – (By Me)
 
 <img width="1920" height="1080" alt="Screenshot (1440)" src="https://github.com/user-attachments/assets/2cc5de4e-96b4-4e8e-904f-f7b4e516877e" />
 
+____________________________________________________________________________________________________________________________________________________________
+
 ### 2. Nested Redo loops API
 
-### Tree View
+### Tree View – (By Syncloop)
 
 <img width="1920" height="772" alt="Screenshot (1330)" src="https://github.com/user-attachments/assets/b9c52e6d-e2b7-44a6-9273-f10903dc904c" />
 
-### Flowchart View
+### Flowchart View – (By Me)
 <img width="1920" height="1080" alt="Screenshot (1438)" src="https://github.com/user-attachments/assets/aa6729c1-1304-45f1-9554-a90eb8476688" />
 
 
